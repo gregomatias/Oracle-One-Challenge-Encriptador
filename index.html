@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Encriptor</title>
+</head>
+
+<body>
+    <header>
+
+        <div id="cabecera">
+            <img src="img/spy.png" alt="" width="231" height="178">
+
+            <h1>Encriptor</h1>
+
+        </div>
+    </header>
+
+    <div class="flex-container">
+
+        <section id="section-encripta">
+
+            <div class="caja-texto">
+
+                <textarea placeholder="The text to be encrypted" id="text-encriptador" required cols="50" rows="2" maxlength="311"></textarea>
+                <button class="btn-agregar" id="btn-encriptar" type="submit">Encrypt</button>
+            </div>
+
+        </section>
+
+        <section id="section-desencripta">
+
+            <div class="caja-texto">
+                <textarea placeholder="Text to be decrypted" id="text-desencriptador" required cols="50" rows="2" maxlength="311"></textarea>
+                <button class="btn-agregar" id="btn-desencriptar" type="submit">Decrypt</button>
+
+            </div>
+
+
+        </section>
+
+    </div>
+
+    <div class="flex-container">
+        <section id="section-resultado">
+
+            <div class="caja-texto">
+                <textarea placeholder="Result" id="text-resultado" cols="50" rows="2" maxlength="311"
+                    readonly></textarea>
+
+                <button class="btn-agregar" id="btn-copiar" type="submit">Copy</button>
+
+            </div>
+
+
+    </div>
+
+
+
+    </section>
+    </div>
+
+
+    <footer class="footer">
+        <div >
+            <img src="img/footer.png" alt="" width="220" height="36">
+
+        </div>
+        <div >
+            <img src="img/alura.png" alt="" width="220" height="36">
+
+        </div>
+    </footer>
+
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
