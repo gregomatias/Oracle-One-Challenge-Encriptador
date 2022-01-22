@@ -4,6 +4,7 @@ var botonCopiar = document.querySelector("#btn-copiar");
 var textAreaEncriptador = document.querySelector("#text-encriptador");
 var textAreaDesencriptador = document.querySelector("#text-desencriptador");
 var textAreaResultado = document.querySelector("#text-resultado");
+var botonAvisaCopiado = document.querySelector("#btn-info-copiado");
 
 
 textAreaEncriptador.addEventListener("input", function () {
@@ -18,7 +19,7 @@ textAreaDesencriptador.addEventListener("input", function () {
 
 botonEncriptar.addEventListener("click", function () {
 
-    console.log("entro");
+
     textAreaResultado.value = encripta(textAreaEncriptador.value);
     textAreaEncriptador.value = "";
 
@@ -33,15 +34,20 @@ botonDesencriptar.addEventListener("click", function () {
 });
 
 
-botonCopiar.addEventListener("click", function () {
+
+botonCopiar.addEventListener("click", function (event) {
+
 
     copiaTexto();
+
+    muestraBotonAvisoCopiado();
+
+
 
 });
 
 //reemplaza mayusculas por minusculas, acentos por sin acento y caracteres extaños por vacio;
 function depuraTexto(textoIngresado) {
-console.log(textoIngresado);
 
     var textoReemplazado = textoIngresado.replace(/á/g, "a");
     textoReemplazado = textoReemplazado.replace(/é/g, "e");
@@ -97,7 +103,16 @@ function copiaTexto() {
     /* Copy the text inside the text field */
     navigator.clipboard.writeText(copyText.value);
 
-    /* Alert the copied text */
-    alert("Copied the text: " + copyText.value);
 }
 
+function muestraBotonAvisoCopiado() {
+
+
+    botonAvisaCopiado.classList.remove("invisible");
+
+    setTimeout(function () {
+
+        botonAvisaCopiado.classList.add("invisible");
+    }, 600);
+
+}

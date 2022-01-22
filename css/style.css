@@ -46,14 +46,14 @@ font-size: 100px;
 
 #section-encripta{
   flex: 50%;
-  padding:  10px;
+  padding:  5px;
   
 }
  
 
 #section-desencripta{
   flex: 50%;
-  padding-top:  10px;
+  padding-top:  5px;
   
 }
 
@@ -103,10 +103,37 @@ textarea:focus {
     border: none;
     transition: .3s ease all;
   } 
-  
+
+  .btn-agregar:active {
+  transform: translateY(3px);
+  transition: 0.3s;
+  }
+
  .btn-agregar:hover {
     background: #9811c0;
   } 
+
+
+  #btn-info-copiado{
+  background-color: #9811c0;
+  width: 100px;
+  height: 20px;
+  color: #fff;
+  border-radius: 5px;
+  position: relative;
+  margin-left: 290px;
+  border: none;
+  outline: none;
+  margin-bottom: 1px;
+
+  }
+
+
+  .invisible{
+    opacity: 0;
+    transition: 0.7s;
+  }
+
 
   .footer{
     margin-top: auto;
@@ -139,7 +166,9 @@ textarea:focus {
     header{
       margin-bottom: 0;
     }
-  
+    #btn-info-copiado{
+    margin-left: 290px;
+    }
   } 
 
   @media (max-width: 960px) {
