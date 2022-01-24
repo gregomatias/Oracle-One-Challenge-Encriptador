@@ -54,7 +54,7 @@ function depuraTexto(textoIngresado) {
     textoReemplazado = textoReemplazado.replace(/í/g, "i");
     textoReemplazado = textoReemplazado.replace(/ó/g, "o");
     textoReemplazado = textoReemplazado.replace(/ú/g, "u");
-    textoReemplazado = textoReemplazado.replace(/[^A-Z-a-z]/g, "").toLowerCase();
+    textoReemplazado = textoReemplazado.replace(/[^A-Z-a-z-0-9\s\r]/g, "").toLowerCase();
 
 
     return textoReemplazado;
